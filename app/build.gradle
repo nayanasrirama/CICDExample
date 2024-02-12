@@ -9,6 +9,16 @@ if(keystorePropertiesFile.exists()){
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
+def getMyVersionCode = { ->
+    return project.hasProperty('versionCode') ? versionCode.toInteger() : -1
+}
+
+// get version name from the specified property argument `-PversionName` during the build call
+def getMyVersionName = { ->
+    return project.hasProperty('versionName') ? versionName : "1.0"
+}
+
+
 android {
     namespace 'com.example.cicdexample'
     compileSdk 33
@@ -34,8 +44,8 @@ android {
         applicationId "com.example.cicdexample"
         minSdk 24
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode getMyVersionCode()
+        versionName getMyVersionName()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
