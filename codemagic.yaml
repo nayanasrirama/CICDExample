@@ -11,12 +11,9 @@ workflows:
 
     scripts:
       # ....
-      - name: C:\Users\nayana\AppData\Local\Android\Sdk
-        script: |
-          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
       - name: Build Android release
         script: |
           - ./gradlew assembleRelease
 
     artifacts:
-      - app/build/outputs/**/*.apk
+      - app/build/**/outputs/**/*.apk
