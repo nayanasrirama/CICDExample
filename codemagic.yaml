@@ -20,8 +20,6 @@ workflows:
 
     artifacts:
       - app/build/**/outputs/apk/**/*.apk
-    publishing:
-      #...
   android-workflow-debug:
     name: CI-CD debug workflow
     max_build_duration: 100
@@ -38,8 +36,6 @@ workflows:
 
     artifacts:
       - app/build/**/outputs/apk/**/*.apk
-    publishing:
-      #...
   android-workflow-release:
     name: CI-CD release workflow
     max_build_duration: 100
