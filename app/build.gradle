@@ -24,8 +24,9 @@ android {
     compileSdk 34
 
     signingConfigs {
+
         release {
-            if (System.getenv()["CI"]) { // CI=true is exported by Codemagic
+            if (System.getenv()["CI"]) { // CI=true is exported by Code-magic
                 storeFile file(System.getenv()["CM_KEYSTORE_PATH"])
                 storePassword System.getenv()["CM_KEYSTORE_PASSWORD"]
                 keyAlias System.getenv()["CM_KEY_ALIAS"]
@@ -52,11 +53,28 @@ android {
 
 
     buildTypes {
+        dev{
+            minifyEnabled false
+            debuggable true
+            initWith debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".dev"
+        }
+
+        uat {
+            minifyEnabled false
+            debuggable true
+            initWith debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".uat"
+        }
+
         release {
             minifyEnabled false
+            debuggable false
+            // initWith debug
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
-
         }
     }
     compileOptions {
