@@ -8,6 +8,8 @@ https://docs.codemagic.io/getting-started/about-codemagic/ - Info on what is cod
 
 https://docs.codemagic.io/yaml-quick-start/building-a-native-android-app/ - How to implement codemagic in android native apps.
 
+https://blog.codemagic.io/the-complete-guide-to-ci-cd/#getting-started-with-codemagic-cicd-for-native-android-apps
+
 Create a repo in any one of the platform github/bitbucket etc 
 
 1. Create a codemagic.yaml file at the root of the project.
