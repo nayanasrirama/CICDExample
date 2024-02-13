@@ -21,3 +21,18 @@ Create a repo in any one of the platform github/bitbucket etc
 9. Push all the changes to your repo.
 10. Go to Codemagic -> click on apps & your codemagic.yaml will be automatically loaded or select the branch it will appear.
 11. Click  on start new build and select your workflows the builds will be generated within 5-10 minutes.
+
+Note: If build fails in codemagic with an error ./gradlew assembleDebug "Permission denied" then go to your android studio & open terminal execute the following commands one by one 
+
+-git update-index --chmod=+x gradlew
+
+-git add .
+
+-git commit -m "Changing permission of gradlew"
+
+-git push
+
+
+You should see:
+
+mode change 100644 => 100755 gradlew
