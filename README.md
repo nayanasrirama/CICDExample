@@ -3,7 +3,9 @@ A sample project to implement CI/CD [Codemagic].
 Links to refer 
 
 https://medium.com/hackernoon/top-ci-cd-tools-for-your-android-and-ios-projects-8d356b983b3b - medium link to refer for more CI/CD tools.
+
 https://docs.codemagic.io/getting-started/about-codemagic/ - Info on what is codemagic.
+
 https://docs.codemagic.io/yaml-quick-start/building-a-native-android-app/ - How to implement codemagic in android native apps.
 
 Create a repo in any one of the platform github/bitbucket etc 
