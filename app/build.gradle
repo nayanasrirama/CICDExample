@@ -51,14 +51,41 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions "version"
+
+    productFlavors {
+
+        dev{
+            dimension "version"
+            versionCode 100
+            versionName "1.0.0"
+         //   manifestPlaceholders = [appIcon: '@mipmap/ic_launcher', appIconRound: '@mipmap/ic_launcher_round']
+        }
+        sRelease {
+            dimension "version"
+            versionCode 100
+            versionName "1.0.0"
+           // manifestPlaceholders = [appIcon: '@mipmap/ic_launcher', appIconRound: '@mipmap/ic_launcher_round']
+        }
+    }
+
+    testOptions.unitTests {
+        includeAndroidResources = true
+
+        all {
+            testLogging {
+                events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+            }
+        }
+    }
 
     buildTypes {
-        dev{
+        debug{
             minifyEnabled false
             debuggable true
             initWith debug
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            applicationIdSuffix ".dev"
+            applicationIdSuffix ".qa"
         }
 
         uat {
