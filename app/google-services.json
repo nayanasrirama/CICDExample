@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "891973151131",
+    "project_id": "cicd-cdb9b",
+    "storage_bucket": "cicd-cdb9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891973151131:android:2c30d3a3b488f49509d93e",
+        "android_client_info": {
+          "package_name": "com.example.cicdexample.qa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIREaoxY8J0IWlYAmbkCpoX99oYo7xcdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
