@@ -62,7 +62,7 @@ workflows:
       android_signing:
         - keystore_reference
       vars:
-        PACKAGE_NAME: "com.example.cicdexample"
+        PACKAGE_NAME: "com.example.cicdexample.qa"
     scripts:
       # ....
       - name: Set Android SDK location
