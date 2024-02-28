@@ -59,13 +59,31 @@ android {
             dimension "version"
             versionCode 100
             versionName "1.0.0"
-         //   manifestPlaceholders = [appIcon: '@mipmap/ic_launcher', appIconRound: '@mipmap/ic_launcher_round']
+            applicationIdSuffix ".qa"
+            //   manifestPlaceholders = [appIcon: '@mipmap/ic_launcher', appIconRound: '@mipmap/ic_launcher_round']
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher_qa",
+                    appIconRound: "@mipmap/ic_launcher_qa_round"
+            ]
         }
+
+        uat{
+            dimension "version"
+            versionCode 100
+            versionName "1.0.0"
+            applicationIdSuffix ".uat"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher_uat",
+                    appIconRound: "@mipmap/ic_launcher_uat_round"
+            ]
+
+        }
+
         sRelease {
             dimension "version"
             versionCode 100
             versionName "1.0.0"
-           // manifestPlaceholders = [appIcon: '@mipmap/ic_launcher', appIconRound: '@mipmap/ic_launcher_round']
+            manifestPlaceholders = [appIcon: '@mipmap/ic_launcher', appIconRound: '@mipmap/ic_launcher_round']
         }
     }
 
@@ -85,16 +103,15 @@ android {
             debuggable true
             initWith debug
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            applicationIdSuffix ".qa"
         }
 
-        uat {
+      /*  uat {
             minifyEnabled false
             debuggable true
             initWith debug
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             applicationIdSuffix ".uat"
-        }
+        }*/
 
         release {
             minifyEnabled false
