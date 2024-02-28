@@ -57,6 +57,8 @@ workflows:
     name: CI-CD release workflow firebase
     max_build_duration: 100
     environment:
+      groups:
+        - firebase_token
       android_signing:
         - keystore_reference
       vars:
@@ -71,7 +73,7 @@ workflows:
       - app/build/**/outputs/apk/**/*.apk
     publishing:
       firebase:
-        firebase_token: $firebase_token
+        firebase_token: $FireBase_token
         android:
           app_id: 1:891973151131:android:2c30d3a3b488f49509d93e
           groups:
