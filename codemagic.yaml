@@ -75,7 +75,7 @@ workflows:
       firebase:
         firebase_token: $FireBase_token
         android:
-          app_id: 1:891973151131:android:a1d282d3fca07f7409d93e
+          app_id: 1:891973151131:android:2c30d3a3b488f49509d93e
           groups:
             - android_tester
 
