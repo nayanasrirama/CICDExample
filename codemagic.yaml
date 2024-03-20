@@ -72,10 +72,6 @@ workflows:
     artifacts:
       - app/build/**/outputs/apk/**/*.apk
     publishing:
-      google_play:
-        track: internal
-        submit_as_draft: true
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
       firebase:
         firebase_service_account: $FIREBASE_SERVICE_ACCOUNT
 
