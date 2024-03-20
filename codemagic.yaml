@@ -62,7 +62,7 @@ workflows:
       android_signing:
         - keystore_reference
       vars:
-        PACKAGE_NAME: "com.example.cicdexample"
+        PACKAGE_NAME: "com.example.cicdexample.qa"
     scripts:
       # ....
       - name: Set Android SDK location
@@ -72,11 +72,18 @@ workflows:
     artifacts:
       - app/build/**/outputs/apk/**/*.apk
     publishing:
+      google_play:
+        track: internal
+        submit_as_draft: true
+        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
       firebase:
-        firebase_token: $FireBase_token
+        firebase_service_account: $FIREBASE_SERVICE_ACCOUNT
+
         android:
           app_id: 1:891973151131:android:2c30d3a3b488f49509d93e
           groups:
             - android_tester
+
+
 
 
