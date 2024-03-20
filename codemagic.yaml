@@ -73,8 +73,8 @@ workflows:
       - app/build/**/outputs/apk/**/*.apk
     publishing:
       firebase:
+        firebase_token: $FireBase_token
         firebase_service_account: $FIREBASE_SERVICE_ACCOUNT
-
         android:
           app_id: 1:891973151131:android:2c30d3a3b488f49509d93e
           groups:
